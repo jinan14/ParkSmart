@@ -88,9 +88,14 @@ button:disabled {
 }
 
 .page-container {
-  max-width: 640px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
+}
+
+.auth-page {
+  max-width: 420px;
+  margin: 0 auto;
 }
 
 .auth-page form {
@@ -134,4 +139,250 @@ button:disabled {
 .form-error {
   color: var(--error);
   font-size: 0.9rem;
+}
+
+.empty-state,
+.loading-state {
+  color: var(--text-muted);
+  padding: 1.5rem 0;
+}
+
+.map-page {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.map-page .leaflet-container {
+  width: 100%;
+  height: 520px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.map-page .lot-list {
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.lot-card {
+  display: block;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  text-decoration: none;
+  color: inherit;
+}
+
+.lot-card:hover {
+  border-color: var(--accent);
+}
+
+.lot-card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.lot-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.lot-detail-header {
+  margin-bottom: 1.5rem;
+}
+
+.lot-detail-header p {
+  color: var(--text-muted);
+  margin: 0.15rem 0;
+}
+
+.space-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.space-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.badge-available {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge-unavailable {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .badge-available {
+    background: #14532d;
+    color: #bbf7d0;
+  }
+  .badge-unavailable {
+    background: #7f1d1d;
+    color: #fecaca;
+  }
+}
+
+.owner-lots-page,
+.owner-lot-spaces-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.lot-list-simple {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.owner-lot-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+}
+
+.owner-lot-row h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.owner-lot-row p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.card-form {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  background: var(--surface);
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.card-form input,
+.card-form select,
+.card-form textarea {
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+}
+
+.form-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.form-row > label {
+  flex: 1;
+}
+
+.space-builder-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.space-builder-row input {
+  flex: 1;
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.space-builder-row select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.icon-button {
+  background: transparent;
+  color: var(--error);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+.icon-button:hover {
+  background: var(--border);
+}
+
+.secondary-button {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.secondary-button:hover {
+  background: var(--border);
+}
+
+.space-manage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-width: 480px;
+}
+
+.space-manage-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  background: var(--surface);
+}
+
+.space-manage-row .space-info {
+  flex: 1;
 }
