@@ -2,6 +2,8 @@ import "dotenv/config";
 import express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
 import authRoutes from "./routes/auth";
+import parkingLotRoutes from "./routes/parkingLots";
+import parkingSpaceRoutes from "./routes/parkingSpaces";
 
 const app = express();
 
@@ -13,6 +15,8 @@ app.get("/api/health", (_req, res) => {
 });
 
 app.use("/api/auth", authRoutes);
+app.use("/api/parking-lots", parkingLotRoutes);
+app.use("/api/parking-spaces", parkingSpaceRoutes);
 
 app.use((err: unknown, _req: Request, res: Response, _next: NextFunction) => {
   console.error(err);
