@@ -18,6 +18,8 @@ export function Navbar() {
       <div className="navbar-links">
         {user ? (
           <>
+            {user.role === "DRIVER" && <Link to="/map">Browse Map</Link>}
+            {user.role === "OWNER" && <Link to="/owner/lots">My Lots</Link>}
             <Link to="/profile">{user.fullName}</Link>
             <button onClick={handleLogout}>Log out</button>
           </>
